@@ -1,3 +1,4 @@
+import { formatarPokemon } from "../utils/textFormatters.js";
 import { PokemonResumo } from "./Pokemon.js"
 
 
@@ -23,7 +24,7 @@ listar() {
         return null;
     }
     this.pokemons.forEach((p) => {
-        console.log(`#${p.id} - ${p.nome} | tipos: ${p.tipos.join(", ")} | Altura: ${p.altura} | Peso: ${p.peso}`);
+        console.log(formatarPokemon(p));
     });
 };
 
