@@ -1,7 +1,7 @@
 import { PokemonResumo } from "./Pokemon.js"
 
 
-class CatalogoPokemon {
+export class CatalogoPokemon {
     private pokemons: PokemonResumo[] = []
     
 
@@ -17,6 +17,22 @@ adicionar(pokemon: PokemonResumo){
 
 
 };
-listar(){};
-remover(){}
+listar() {
+    if (this.pokemons.length === 0) {
+        console.log(`[AVISO] Catálogo vazio.`);
+        return null;
+    }
+    this.pokemons.forEach((p) => {
+        console.log(`#${p.id} - ${p.nome} | tipos: ${p.tipos.join(", ")} | Altura: ${p.altura} | Peso: ${p.peso}`);
+    });
+};
+
+remover(id: number) {
+    if (!this.pokemons.some((p) => p.id === id)) {
+        console.log(`[AVISO] Nenhum Pokémon encontrado com esse ID.`);
+        return null;
+    }
+    this.pokemons = this.pokemons.filter((p) => p.id !== id);
+    console.log(`[OK] Pokémon removido do catálogo.`);
+}
 }
