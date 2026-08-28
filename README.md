@@ -69,6 +69,7 @@ pokedex-typescript-lite/
 - Listar catálogo
 - Remover Pokemon do catálogo por ID
 - Exibir mensagens claras no terminal
+- Persistir o catálogo em arquivo (pc_box.json), mantendo os dados entre execuções
 
 ## Exemplos de execução
 
@@ -156,7 +157,6 @@ Link do Kanban: https://github.com/users/xikaobf/projects/1
 
 ## Melhorias futuras
 
-- Persistir o catálogo em pc_box.json
 - Criar menu interativo no terminal
 - Exibir HP, Ataque e Defesa
 - Criar filtros por tipo de Pokemon
