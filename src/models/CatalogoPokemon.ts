@@ -29,10 +29,10 @@ listar() {
 
 remover(id: number) {
     if (!this.pokemons.some((p) => p.id === id)) {
-        console.log(`[AVISO] Nenhum Pokémon encontrado com esse ID.`);
+        console.log(`[AVISO] Nenhum Pokemon encontrado com esse ID.`);
         return null;
     }
     this.pokemons = this.pokemons.filter((p) => p.id !== id);
-    console.log(`[OK] Pokémon removido do catálogo.`);
+    console.log(`[OK] Pokemon removido do catálogo.`);
 }
 }

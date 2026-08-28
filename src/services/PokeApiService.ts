@@ -9,7 +9,7 @@ export async function buscarPokemon(nomeOuId: string | number): Promise<PokemonR
     try{
         const resposta = await fetch(url)
         if(!resposta.ok){
-            console.log("Pokémon não encontrado.")
+            console.log("Pokemon não encontrado.")
             return null
         }
         const dados: PokemonApiResponse = await resposta.json();
@@ -24,7 +24,7 @@ export async function buscarPokemon(nomeOuId: string | number): Promise<PokemonR
         }
     }
     catch(error){
-    console.log("Não foi possível buscar o Pokémon.")
+    console.log("Não foi possível buscar o Pokemon.")
     return null
 }
 }
