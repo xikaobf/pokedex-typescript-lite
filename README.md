@@ -70,23 +70,35 @@ pokedex-typescript-lite/
 - Remover Pokemon do catálogo por ID
 - Exibir mensagens claras no terminal
 - Persistir o catálogo em arquivo (pc_box.json), mantendo os dados entre execuções
+- Menu interativo no terminal
 
 ## Exemplos de execução
+O sistema roda em um menu interativo no terminal:
+```
+1 - Buscar e adicionar Pokemon
+2 - Listar catalogo
+3 - Remover Pokemon
+4 - Sair
+Escolha uma opcao:
+```
 
 ### Busca válida e adição ao catálogo
 
+Entrada testada: opção `1`, depois `nidoran-m`
+
 Saída obtida:
 ```
-[OK] pikachu adicionado ao catálogo.
-[OK] charmander adicionado ao catálogo.
+Digite o ID ou nome do Pokemon: 32
+[OK] nidoran-m adicionado ao catálogo.
 ```
 
 ### Duplicidade
 
-Entrada testada: adicionar pikachu uma segunda vez
+Entrada testada: opção `1`, depois `charmander` (que já estava no catálogo)
 
 Saída obtida:
 ```
+Digite o ID ou nome do Pokemon: charmander
 Pokemon ja cadastrado
 ```
 
@@ -101,24 +113,27 @@ Pokemon não encontrado.
 
 ### Listagem do catálogo
 
+Entrada testada: opção `2`
+
 Saída obtida:
 ```
-#25 - pikachu | tipos: electric | Altura: 4 | Peso: 60
 #4 - charmander | tipos: fire | Altura: 6 | Peso: 85
+#32 - nidoran-m | tipos: poison | Altura: 5 | Peso: 90
 ```
 
 ### Remoção
 
-Entrada testada: remover ID 25
+Entrada testada: opção `3`, depois `4`
 
 Saída obtida:
 ```
+Digite o ID do pokemon: 4
 [OK] Pokemon removido do catálogo.
 ```
 
 Listagem após a remoção:
 ```
-#4 - charmander | tipos: fire | Altura: 6 | Peso: 85
+#32 - nidoran-m | tipos: poison | Altura: 5 | Peso: 90
 ```
 
 ## Conceitos aplicados
@@ -157,6 +172,5 @@ Link do Kanban: https://github.com/users/xikaobf/projects/1
 
 ## Melhorias futuras
 
-- Criar menu interativo no terminal
 - Exibir HP, Ataque e Defesa
 - Criar filtros por tipo de Pokemon
